@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Поддержка — Вспоминалка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f9;--card:#fff;--ink:#1d1a2e;--muted:#6d6a84;--accent:#2563eb;--line:#e2e5ee;
+  --accent-soft:#e3edff;
+  --font-ui:'Golos Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  --font-read:'Literata',Georgia,serif}
+@media (prefers-color-scheme:dark){:root{--bg:#12151f;--card:#1b1f2e;--ink:#f0eefb;
+  --muted:#a5a1bd;--accent:#6f9dff;--line:#2a2f45;--accent-soft:#1e2b47}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);
+  font-size:17px;line-height:1.6}
+.wrap{max-width:680px;margin:0 auto;padding:56px 20px 72px}
+h1,h2{font-family:var(--font-read);letter-spacing:-.01em}
+h1{font-size:36px;margin:0 0 6px}
+h2{font-size:20px;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 30px}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.back{display:inline-block;margin-bottom:28px;color:var(--muted);text-decoration:none;font-size:15px}
+.back:hover{color:var(--accent)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:0 0 14px}
+.box p:last-child{margin-bottom:0}
+.contact{background:var(--accent-soft);border:none}
+footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">← Вспоминалка</a>
+
+<h1>Поддержка</h1>
+<p class="lead">Что-то не работает, карточка с ошибкой, есть идея — напишите, разберёмся.</p>
+
+<div class="box contact">
+<h2>Написать нам</h2>
+<p>Почта поддержки появится здесь в ближайшие дни — сейчас её заводим.</p>
+<p style="color:var(--muted);font-size:15px;margin-top:10px">Приложение пока проходит закрытое тестирование, публикация впереди.</p>
+</div>
+
+<div class="box">
+<h2>Нашли ошибку в карточке?</h2>
+<p>Напишите, в каком предмете и в какой теме она встретилась, и что именно не так. Карточки составлены по учебникам, но недосмотр всегда возможен — поправим и обновим приложение.</p>
+</div>
+
+<div class="box">
+<h2>Прогресс пропал</h2>
+<p>Прогресс хранится на самом устройстве. Он исчезает, если приложение удалили и поставили заново, — между устройствами прогресс не переносится и в облаке не сохраняется. В веб-версии он привязан к браузеру: другой браузер или режим инкогнито — другой прогресс.</p>
+</div>
+
+<div class="box">
+<h2>Ответ засчитан неправильно</h2>
+<p>Описка в одну букву засчитывается как верный ответ — кроме карточек, где проверяется само написание. Если же ответ явно верный, но не принят, напишите нам текст вопроса и то, что вы вводили.</p>
+</div>
+
+<div class="box">
+<h2>Приложения ещё нет в App Store</h2>
+<p>Пока «Вспоминалка» проходит закрытое тестирование. Попробовать карточки можно прямо сейчас в <a href="/trener/">браузере</a> — там литература и русский язык за 5 класс.</p>
+</div>
+
+<footer>Вспоминалка, 2026 · <a href="/privacy.html" style="color:var(--muted)">Политика конфиденциальности</a></footer>
+</div>
+</body>
+</html>
