@@ -22,19 +22,24 @@ function render(){
 }
 function renderWord(c){
  const selected=new Set(), row=el('div',null,'slots'),clues=el('div'),keys=el('div',null,'letter-keys'),actions=el('div',null,'actions'),feedback=el('p',null,'feedback');
- let shown=0,done=false;
+ let shown=0,done=false,help=false;
+ const form=el('form'), label=el('label','Твой ответ'), input=el('input'), check=el('button','Проверить','primary');
+ label.htmlFor='demo-word-answer';input.id='demo-word-answer';input.autocomplete='off';check.type='submit';form.append(label,input,check);
+ form.addEventListener('submit',e=>{e.preventDefault();if(!norm(input.value))return;if(norm(input.value)===norm(c.a)){finish(true);}else{feedback.textContent='Неверно. Попробуй ещё раз или открой подсказку.';input.focus();}});
+ keys.hidden=true;
+ const toggle=button('Не помню — выбрать буквы',()=>{help=!help;keys.hidden=!help;form.hidden=help;toggle.textContent=help?'Напечатать ответ самостоятельно':'Не помню — выбрать буквы';if(!help)input.focus();});
  feedback.setAttribute('aria-live','polite');row.setAttribute('aria-label','Ответ');
  const keyOf=s=>s.toUpperCase().replaceAll('Ё','Е');
  const letters=[...c.a], answer=new Set(letters.filter(x=>!/[\s–—-]/u.test(x)).map(keyOf));
  function slots(full=false){row.replaceChildren();letters.forEach(l=>{const gap=/[\s–—-]/u.test(l),visible=full||selected.has(keyOf(l));row.append(el('span',gap?l:visible?l:'_',gap?'slot gap':visible?'slot reveal':'slot'));});}
- function finish(known){done=true;slots(true);keys.remove();actions.replaceChildren();feedback.textContent=known?'Верно! Ответ собран.':'Ответ открыт. Попробуй вспомнить его самостоятельно в следующий раз.';feedback.className=known?'feedback success':'feedback';exercise.append(el('p',c.a,'answer'));actions.append(button('Следующая карточка',()=>{index++;hints=0;phase='answer';render();const heading=exercise.querySelector('h3');heading.tabIndex=-1;heading.focus()},'primary'));}
+ function finish(known){done=true;slots(true);form.remove();keys.remove();actions.replaceChildren();feedback.textContent=known?'Верно!':'Ответ открыт. Попробуй вспомнить его самостоятельно в следующий раз.';feedback.className=known?'feedback success':'feedback';exercise.append(el('p',c.a,'answer'));actions.append(button('Следующая карточка',()=>{index++;hints=0;phase='answer';render();const heading=exercise.querySelector('h3');heading.tabIndex=-1;heading.focus()},'primary'));}
  const buttons=new Map();
  function pick(ch){ch=keyOf(ch);if(done||selected.has(ch)||!buttons.has(ch))return;selected.add(ch);const hit=answer.has(ch),b=buttons.get(ch);b.disabled=true;b.classList.add(hit?'hit':'miss');b.setAttribute('aria-label',ch+(hit?', есть в ответе':', нет в ответе'));slots();feedback.textContent=hit?'«'+ch+'» есть в ответе.':'«'+ch+'» нет в ответе. Попробуй другую.';if([...answer].every(l=>selected.has(l)))finish(true);}
  for(const ch of 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ0123456789'){const b=button(ch,()=>pick(ch),'letter-key');buttons.set(ch,b);keys.append(b);}
  const hint=button('Подсказка словами',()=>{clues.append(el('p',c.clues[shown++],'word-clue'));if(shown===c.clues.length)hint.disabled=true;});
- actions.append(hint,button('Показать ответ',()=>finish(false)));
- exercise.append(row,el('p','Нажимай буквы: сразу увидишь, есть ли они в ответе. Одинаковые буквы открываются вместе.'),clues,keys,feedback,actions);
- exercise.onkeydown=e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.key.length!==1)return;if(buttons.has(keyOf(e.key))){e.preventDefault();pick(e.key);}};
+ actions.append(toggle,hint,button('Показать ответ',()=>finish(false)));
+ exercise.append(row,el('p','Напиши ответ самостоятельно. Если трудно — открой подсказку.'),clues,form,keys,feedback,actions);
+ exercise.onkeydown=e=>{if(!help||done||e.ctrlKey||e.metaKey||e.altKey||e.key.length!==1)return;if(buttons.has(keyOf(e.key))){e.preventDefault();pick(e.key);}};
  slots();
 }
 render();
