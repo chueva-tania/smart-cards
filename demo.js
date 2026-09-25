@@ -24,21 +24,36 @@ function renderWord(c){
  const selected=new Set(), row=el('div',null,'slots'),clues=el('div'),keys=el('div',null,'letter-keys'),actions=el('div',null,'actions'),feedback=el('p',null,'feedback');
  let shown=0,done=false,help=false;
  const form=el('form'), label=el('label','Твой ответ'), input=el('input'), check=el('button','Проверить','primary');
- label.htmlFor='demo-word-answer';input.id='demo-word-answer';input.autocomplete='off';check.type='submit';form.append(label,input,check);
- form.addEventListener('submit',e=>{e.preventDefault();if(!norm(input.value))return;if(norm(input.value)===norm(c.a)){finish(true);}else{feedback.textContent='Неверно. Попробуй ещё раз или открой подсказку.';input.focus();}});
+ label.htmlFor='demo-word-answer';input.id='demo-word-answer';input.autocomplete='off';check.type='submit';input.type='hidden';form.append(row,input,check);
+ form.addEventListener('submit',e=>{e.preventDefault();if(!norm(input.value))return;if(norm(input.value)===norm(c.a)){finish(true);}else{feedback.textContent='Неверно. Попробуй ещё раз или открой подсказку.';row.querySelector('input')?.focus();}});
  keys.hidden=true;
- const toggle=button('Не помню — выбрать буквы',()=>{help=!help;keys.hidden=!help;form.hidden=help;toggle.textContent=help?'Напечатать ответ самостоятельно':'Не помню — выбрать буквы';if(!help)input.focus();});
+ const toggle=button('Не помню — выбрать буквы',()=>{help=!help;keys.hidden=!help;check.hidden=help;slots();toggle.textContent=help?'Напечатать ответ самостоятельно':'Не помню — выбрать буквы';if(!help)row.querySelector('input')?.focus();});
  feedback.setAttribute('aria-live','polite');row.setAttribute('aria-label','Ответ');
  const keyOf=s=>s.toUpperCase().replaceAll('Ё','Е');
  const letters=[...c.a], answer=new Set(letters.filter(x=>!/[\s–—-]/u.test(x)).map(keyOf));
- function slots(full=false){row.replaceChildren();letters.forEach(l=>{const gap=/[\s–—-]/u.test(l),visible=full||selected.has(keyOf(l));row.append(el('span',gap?l:visible?l:'_',gap?'slot gap':visible?'slot reveal':'slot'));});}
- function finish(known){done=true;slots(true);form.remove();keys.remove();actions.replaceChildren();feedback.textContent=known?'Верно!':'Ответ открыт. Попробуй вспомнить его самостоятельно в следующий раз.';feedback.className=known?'feedback success':'feedback';exercise.append(el('p',c.a,'answer'));actions.append(button('Следующая карточка',()=>{index++;hints=0;phase='answer';render();const heading=exercise.querySelector('h3');heading.tabIndex=-1;heading.focus()},'primary'));}
+ function slots(full=false){
+  row.replaceChildren();
+  if(!help&&!full){
+   const values=[...input.value];
+   const fields=[];
+   function save(){input.value=fields.map(f=>f.value).join('');}
+   letters.forEach((letter,i)=>{
+    const cell=el('input',null,'slot slot-input');cell.type='text';cell.value=values[i]||'';cell.autocomplete='off';cell.spellcheck=false;cell.setAttribute('aria-label',`Буква ${i+1} из ${letters.length}`);
+    cell.addEventListener('focus',()=>cell.select());
+    cell.addEventListener('input',()=>{const chars=[...cell.value.toUpperCase().replace(/\s/g,'')];cell.value=chars[0]||'';chars.slice(1).forEach((ch,j)=>{if(fields[i+j+1])fields[i+j+1].value=ch;});save();if(chars.length)fields[Math.min(i+chars.length,fields.length-1)].focus();});
+    cell.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!cell.value&&i>0){e.preventDefault();fields[i-1].value='';save();fields[i-1].focus();}if(e.key==='ArrowLeft'&&i>0){e.preventDefault();fields[i-1].focus();}if(e.key==='ArrowRight'&&i<letters.length-1){e.preventDefault();fields[i+1].focus();}});
+    fields.push(cell);row.append(cell);
+   });
+  }else letters.forEach(l=>{const gap=/[\s–—-]/u.test(l),visible=full||selected.has(keyOf(l));row.append(el('span',gap?l:visible?l:'_',gap?'slot gap':visible?'slot reveal':'slot'));});
+ }
+
+ function finish(known){done=true;slots(true);check.remove();input.remove();keys.remove();actions.replaceChildren();feedback.textContent=known?'Верно!':'Ответ открыт. Попробуй вспомнить его самостоятельно в следующий раз.';feedback.className=known?'feedback success':'feedback';exercise.append(el('p',c.a,'answer'));actions.append(button('Следующая карточка',()=>{index++;hints=0;phase='answer';render();const heading=exercise.querySelector('h3');heading.tabIndex=-1;heading.focus()},'primary'));}
  const buttons=new Map();
  function pick(ch){ch=keyOf(ch);if(done||selected.has(ch)||!buttons.has(ch))return;selected.add(ch);const hit=answer.has(ch),b=buttons.get(ch);b.disabled=true;b.classList.add(hit?'hit':'miss');b.setAttribute('aria-label',ch+(hit?', есть в ответе':', нет в ответе'));slots();feedback.textContent=hit?'«'+ch+'» есть в ответе.':'«'+ch+'» нет в ответе. Попробуй другую.';if([...answer].every(l=>selected.has(l)))finish(true);}
  for(const ch of 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ0123456789'){const b=button(ch,()=>pick(ch),'letter-key');buttons.set(ch,b);keys.append(b);}
  const hint=button('Подсказка словами',()=>{clues.append(el('p',c.clues[shown++],'word-clue'));if(shown===c.clues.length)hint.disabled=true;});
  actions.append(toggle,hint,button('Показать ответ',()=>finish(false)));
- exercise.append(row,el('p','Напиши ответ самостоятельно. Если трудно — открой подсказку.'),clues,form,keys,feedback,actions);
+ exercise.append(form,el('p','Нажми на клеточки и напечатай ответ. Если трудно — открой подсказку.'),clues,keys,feedback,actions);
  exercise.onkeydown=e=>{if(!help||done||e.ctrlKey||e.metaKey||e.altKey||e.key.length!==1)return;if(buttons.has(keyOf(e.key))){e.preventDefault();pick(e.key);}};
  slots();
 }
