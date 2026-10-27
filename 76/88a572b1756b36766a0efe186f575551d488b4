@@ -1,0 +1,21 @@
+privacy.html
+  s_47e1862b0edacd::t_d65bbbc7a41ccb 46
+support.html
+  s_47e1862b0edacd::t_148f7929219e82 55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7688a572b1756b36766a0efe186f575551d488b4",
+  "prompts": {},
+  "sessions": {
+    "s_47e1862b0edacd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17c31-7c2d-7a21-a152-859d1b1ad453",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "alchuev <alchuev@gmail.com>"
+    }
+  }
+}
