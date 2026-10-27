@@ -1,0 +1,35 @@
+privacy.html
+  s_47e1862b0edacd::t_77a69a3afb183c 39-53,55,57,59
+README.md
+  s_47e1862b0edacd::t_228a20c7823a9c 1,3-5,7,9-18,20-23,25-99
+demo-engine.js
+  s_47e1862b0edacd::t_0d9328c0778533 119-135,138-143,258-259,270-341,367,396,398-405,460-464,485-500,505,508-509,568,574,608,624,636
+demo.js
+  s_47e1862b0edacd::t_dd2c42d34910c8 17
+docs/image-storage-manifest.json
+  s_47e1862b0edacd::t_f9a32eba3126f6 1-1045
+index.html
+  s_47e1862b0edacd::t_f1afd906b4bb5a 3-7,9-14
+media.js
+  s_47e1862b0edacd::t_0e1e04264ffe2c 1-59
+support.html
+  s_47e1862b0edacd::t_b9f75eef4ce838 40,45,49,55,64-70
+trener/index.html
+  s_47e1862b0edacd::t_15e3f39f801115 348,422,424,555-571,574-579,694-695,706-777,803,832,834-841,896-900,921-936,941,944-945,1004,1010,1044,1060,1072,1082,1493,1498-1507,1558-1559,1561,1578-1579,1585-1587,1668,1724-1725,1733,1779-1780
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d1a3f9e5ce2a405b024c8d2ea25a02551243c018",
+  "prompts": {},
+  "sessions": {
+    "s_47e1862b0edacd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17c31-7c2d-7a21-a152-859d1b1ad453",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "alchuev <alchuev@gmail.com>"
+    }
+  }
+}
