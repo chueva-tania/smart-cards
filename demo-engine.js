@@ -116,8 +116,31 @@
     return false;
   }
 
+  // Keep numeric notation distinct: a fraction is not a decimal or a pair of integers.
+  function numericKey(input) {
+    let value = input.trim().replace(/−/g, '-').replace(/,/g, '.');
+    if (!/^[+-]?[0-9]+(?:\.[0-9]+|\s*\/\s*[0-9]+)?$/.test(value)) return null;
+    const negative = value.startsWith('-');
+    value = value.replace(/^[+-]/, '');
+    const integer = text => text.replace(/^0+/, '') || '0';
+    if (value.includes('/')) {
+      const parts = value.split('/').map(p => integer(p.trim()));
+      if (parts[1] === '0') return null;
+      return (negative && parts[0] !== '0' ? '-' : '') + parts.join('/');
+    }
+    const parts = value.split('.');
+    const whole = integer(parts[0]), fraction = (parts[1] || '').replace(/0+$/, '');
+    return (negative && (whole !== '0' || fraction) ? '-' : '') + whole + (fraction ? '.' + fraction : '');
+  }
+
   /** 'exact' | 'almost' (описка в одну букву) | 'inside' (слово внутри фразы) | false */
   function checkWord(input, card) {
+    if (numericKey(card.a) !== null) {
+      const value = numericKey(input), alternatives = card.alt || [];
+      if (value !== null && [card.a].concat(alternatives).some(t => numericKey(t) === value)) return 'exact';
+      if (alternatives.some(t => numericKey(t) === null && norm(t) === norm(input))) return 'exact';
+      return false;
+    }
     const v = norm(input);
     if (!v) return false;
     const targets = [card.a].concat(card.alt || []).map(norm);
@@ -232,7 +255,8 @@
       rules[id] = {
         fingerprint: entry.fp, ask: entry.ask,
         need: Math.max(1, Math.min(entry.need || 1, groups.length)),
-        groups, bad, authored: true, soft: !!entry.soft
+        groups, bad, authored: true, soft: !!entry.soft,
+        exact: new Set((entry.exact || []).map(exactKey).filter(Boolean))
       };
     }
     fallbackCache = {};
@@ -242,6 +266,78 @@
   const GENERIC_ASK = 'Скажи ещё немного своими словами — посмотри на подсказку.';
 
   /* ---------------------------------------------------------------- фразы */
+
+  /** «Нет он испугался»: «нет» в начале фразы перед этими словами — ответ «нет», а не отрицание. */
+  const AFTER_INTERJECTION = new Set(['он', 'она', 'оно', 'они', 'я', 'мы', 'ты', 'вы', 'это', 'потому', 'так', 'конечно', 'наоборот',
+    'ведь', 'просто', 'не', 'там', 'тут', 'тогда', 'совсем']);
+  /** «Запятая перед а и но», «союз но», «на а»: «а» и «но» — названные слова, а не граница мысли. */
+  const MENTION_BEFORE = new Set(['перед', 'после', 'союз', 'союза', 'союзом', 'союзы', 'союзов', 'буква', 'буквы', 'букву', 'буквой',
+    'на', 'и', 'или', 'слово', 'слова', 'частица', 'окончание', 'окончания', 'звук', 'звука']);
+
+  /** Сокращения из тетради: точка внутри них не конец фразы, а правилам нужно слово целиком. */
+  const ABBREVIATIONS = [
+    ['и\\s?т\\.\\s?п\\.?', 'и тому подобное'], ['и\\s?т\\.\\s?д\\.?', 'и так далее'],
+    ['ж\\.\\s?р\\.?', 'женский род'], ['м\\.\\s?р\\.?', 'мужской род'], ['ср\\.\\s?р\\.?', 'средний род'],
+    ['мн\\.\\s?ч\\.?', 'множественное число'], ['ед\\.\\s?ч\\.?', 'единственное число'],
+    ['и\\.\\s?п\\.?', 'именительный падеж'], ['р\\.\\s?п\\.?', 'родительный падеж'],
+    ['д\\.\\s?п\\.?', 'дательный падеж'], ['в\\.\\s?п\\.?', 'винительный падеж'],
+    ['т\\.\\s?п\\.?', 'творительный падеж'], ['п\\.\\s?п\\.?', 'предложный падеж'],
+    ['т\\.\\s?е\\.?', 'то есть'], ['т\\.\\s?к\\.?', 'так как'], ['т\\.\\s?д\\.?', 'так далее']
+  ].map(([pattern, words]) => [new RegExp('(^|[^а-яёa-z0-9])' + pattern + '(?![а-яё])', 'g'), '$1 ' + words + ' ']);
+
+  /** Знаки действий — словами; тире — действие, только если с обеих сторон число или одна буква,
+   *  двоеточие — если справа число или буква, а слева тоже или пробел. */
+  function spellOperators(text) {
+    const chars = [...text];
+    const isOperandChar = c => /[\p{L}\p{N}]/u.test(c);
+    const operand = (i, step) => {
+      let j = i + step;
+      while (j >= 0 && j < chars.length && chars[j] === ' ') j += step;
+      let run = 0, digits = true;
+      while (j >= 0 && j < chars.length && isOperandChar(chars[j])) {
+        if (!(chars[j] >= '0' && chars[j] <= '9')) digits = false;
+        run++; j += step;
+      }
+      return run > 0 && (run === 1 || digits);
+    };
+    let out = '';
+    chars.forEach((c, i) => {
+      const between = () => operand(i, -1) && operand(i, 1);
+      if ('×·∙⋅*'.includes(c)) out += ' умножить ';
+      else if (c === '÷') out += ' разделить ';
+      else if (c === '+') out += ' плюс ';
+      else if (c === '=') out += ' равно ';
+      else if (c === '%') out += ' процент ';
+      else if (c === '<') out += ' меньше ';
+      else if (c === '>') out += ' больше ';
+      else if (c === '−') out += ' минус ';
+      // Пробел перед двоеточием бывает только в записи действия («число : 100»), в тексте — «Ответ: 5».
+      else if (c === ':' && operand(i, 1) && (operand(i, -1) || i === 0 || chars[i - 1] === ' ')) out += ' разделить ';
+      else if ('-–—'.includes(c) && between()) out += ' минус ';
+      else out += c;
+    });
+    return out;
+  }
+
+  /** Ответ перед разбором: сокращения раскрыты, знаки действий записаны словами. */
+  function prepare(text) {
+    let s = String(text == null ? '' : text).toLowerCase();
+    for (const [regex, template] of ABBREVIATIONS) s = s.replace(regex, template);
+    return spellOperators(s);
+  }
+
+  /** Ответ, разрешённый правилом целиком, сравнивается со знаками действий. */
+  const exactKey = text => norm(prepare(text));
+
+  /** «а» или «но» названы как слово: после «перед», «союз», «на»…, в паре «а и но» или в самом конце фразы. */
+  function isMention(words, k) {
+    const w = words[k].word;
+    if (w !== 'а' && w !== 'но') return false;
+    if (k === words.length - 1) return k > 0;
+    if (k > 0 && MENTION_BEFORE.has(words[k - 1].word)) return true;
+    if (k + 2 < words.length && COORDINATORS.has(words[k + 1].word) && (words[k + 2].word === 'а' || words[k + 2].word === 'но')) return true;
+    return false;
+  }
 
   /** «а», «но» в кавычках («а», «но») и с дефисом (-а) — разговор о слове, а не граница мысли. */
   function protectBreakers(part) {
@@ -268,7 +364,7 @@
 
   /** Ответ → фразы из слов; каждое слово несёт номер части между запятыми. */
   function clauses(text) {
-    const chars = [...text];
+    const chars = [...prepare(text)];
     const isDigit = c => c >= '0' && c <= '9';
     const neighbour = (i, step) => {
       let j = i + step;
@@ -297,13 +393,16 @@
 
     const result = [];
     for (const phrase of strong) {
-      let tokens = [];
+      const words = [];
       phrase.forEach((part, partIndex) => {
-        for (const w of splitWords(norm(protectBreakers(part)))) {
-          if (w.startsWith('q') && CLAUSE_BREAKERS.has(w.slice(1))) tokens.push({ word: w.slice(1), part: partIndex });
-          else if (CLAUSE_BREAKERS.has(w)) { if (tokens.length) result.push(tokens); tokens = []; }
-          else tokens.push({ word: w, part: partIndex });
-        }
+        for (const w of splitWords(norm(protectBreakers(part)))) words.push({ word: w, part: partIndex });
+      });
+      let tokens = [];
+      words.forEach((item, k) => {
+        const w = item.word;
+        if (w.startsWith('q') && CLAUSE_BREAKERS.has(w.slice(1))) tokens.push({ word: w.slice(1), part: item.part });
+        else if (CLAUSE_BREAKERS.has(w) && !isMention(words, k)) { if (tokens.length) result.push(tokens); tokens = []; }
+        else tokens.push(item);
       });
       if (tokens.length) result.push(tokens);
     }
@@ -358,7 +457,11 @@
       if (t === 'не') {
         if (i + 1 < tokens.length && SOFT_AFTER_NOT.has(tokens[i + 1].text)) { i++; continue; }
         particles++;
-      } else if (NEGATORS.has(t)) others++;
+      } else if (NEGATORS.has(t)) {
+        if (t === 'нет' && i === 0 && tokens.length > 1 && tokens[1].part === tokens[0].part &&
+            AFTER_INTERJECTION.has(tokens[1].text)) { i++; continue; }
+        others++;
+      }
       i++;
     }
     if (particles % 2 === 1 || (particles === 0 && others > 0)) return true;
@@ -379,13 +482,30 @@
     return false;
   }
 
+  /** Окончания, с которыми короткая основа остаётся тем же словом: «час» — «часа», «кот» — «кота». */
+  const SHORT_STEM_ENDINGS = new Set(['', 'а', 'у', 'е', 'ом', 'ем', 'ы', 'и', 'ов', 'ам', 'ами', 'ах', 'ю', 'я']);
+
+  /** Слово ответа — то же, что слово вопроса: та же форма, общая основа от четырёх букв или короткая
+   *  основа с падежным окончанием. «Часть» и «часа», «как» и «какой» — разные слова. */
+  function repeats(t, q) {
+    if (t.text === q.word) return true;
+    for (const f of q.forms) {
+      if (!t.forms.has(f)) continue;
+      if ([...f].length >= 4) return true;
+      if (t.text.startsWith(f) && q.word.startsWith(f) &&
+          SHORT_STEM_ENDINGS.has(t.text.slice(f.length)) && SHORT_STEM_ENDINGS.has(q.word.slice(f.length))) return true;
+    }
+    return false;
+  }
+
   /** Слово ответа ничего не добавляет к вопросу, если оно из вопроса. */
   function isNovel(t, question, questionForms) {
     if (NEGATORS.has(t.text)) return !question.has(t.text);
     if (hasDigit(t.text)) return !question.has(t.text);
-    for (const f of t.forms) if (questionForms.has(f)) return false;
-    return true;
+    return !questionForms.some(q => repeats(t, q));
   }
+
+  const wordForms = question => [...question].sort().map(word => ({ word, forms: forms(word) }));
 
   function scan(tokens, rule, question, questionForms, e) {
     const singles = [], conjunctions = [];
@@ -445,13 +565,13 @@
     const e = { hits: new Set(), vetoed: false };
     const words = meaningful(text);
     const own = new Set(splitWords(norm(text)));
-    const inQuestion = new Set(splitWords(norm(questionText)));
+    const inQuestion = new Set(splitWords(norm(prepare(questionText))));
     const numbers = [...own].filter(hasDigit);
     if (!words.length && !numbers.length && !own.size) return e;
     const asked = meaningful(questionText);
     if (!rule.authored && words.length && words.every(w => asked.some(q => sameWord(w, q))) &&
         [...own].every(w => !NEGATORS.has(w) || inQuestion.has(w)) && numbers.every(n => inQuestion.has(n))) return e;
-    const questionForms = new Set([...inQuestion].flatMap(forms));
+    const questionForms = wordForms(inQuestion);
     for (const tokens of clauses(text)) scan(tokens.map(t => makeToken(t.word, t.part)), rule, inQuestion, questionForms, e);
     return e;
   }
@@ -485,7 +605,7 @@
       const polarity = states.length && states.every(Boolean) ? 'negated' : 'positive';
       groups.push([keyPattern(key, polarity)]);
     }
-    const rule = { fingerprint: fp, ask: GENERIC_ASK, need: 1, groups, bad: [], authored: false, soft: false };
+    const rule = { fingerprint: fp, ask: GENERIC_ASK, need: 1, groups, bad: [], authored: false, soft: false, exact: new Set() };
     fallbackCache[cacheKey] = rule;
     return rule;
   }
@@ -501,7 +621,7 @@
     const current = norm(input);
     if (!current) return clarify;
     const yes = { accepted: true, vetoed: false, question: rule.ask };
-    if (current === norm(card.a)) return yes;
+    if (current === norm(card.a) || rule.exact.has(exactKey(input))) return yes;
     const now = evaluate(input, rule, card.q);
     if (now.vetoed) return { accepted: false, vetoed: true, question: rule.ask };
     if (now.hits.size >= rule.need) return yes;
@@ -513,7 +633,7 @@
   }
 
   const api = {
-    install, review, checkWord, fingerprint, norm, stem, meaningful, clauses, isInside, lev,
+    install, review, checkWord, fingerprint, norm, stem, meaningful, clauses, prepare, isInside, lev,
     get loadProblems() { return loadProblems; },
     get rules() { return rules; }
   };

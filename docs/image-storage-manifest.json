@@ -1,0 +1,1045 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "assets/mumu-alone.png",
+      "key": "illustrations/web-v1/assets/mumu-alone.png",
+      "bytes": 2904371,
+      "sha256": "508e95eb8254702bddc7f8fcb382233b903c52746079055767a6b50415f66b9b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "assets/mumu-care.png",
+      "key": "illustrations/web-v1/assets/mumu-care.png",
+      "bytes": 3231925,
+      "sha256": "fde4e5e24322aab195b5b932ad5723e48b01aa4286a44377e080c719b4f5e1cb",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "assets/mumu-friend.png",
+      "key": "illustrations/web-v1/assets/mumu-friend.png",
+      "bytes": 3322630,
+      "sha256": "6e6303b3f101c7fdaad33480f3e4fd03f0269e85c4122319d8069a5fa3e6bc4c",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-battle.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-battle.jpg",
+      "bytes": 260750,
+      "sha256": "81a01dec89e632e6033f5788acdfdae0f818108e4b1548165b08907a05d64327",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-care.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-care.jpg",
+      "bytes": 267262,
+      "sha256": "22fc566d9e75970f71fcf53fd8dcca78b94b3fc761a3484c48bed01d1d1c0f4c",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-clouds.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-clouds.jpg",
+      "bytes": 271493,
+      "sha256": "d547b00a0a5362e9f47b8e2bfd6afc61b67accdc47cb636b2185faa2b6403ee6",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-colonel.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-colonel.jpg",
+      "bytes": 238029,
+      "sha256": "64f39a93c009dbad003c34f1baf975e194f29922a00124d4a302b5db7601b84a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-comrades.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-comrades.jpg",
+      "bytes": 255089,
+      "sha256": "3f185b36342e19a6b6a7cd36ad76e705add64ace1d51bdfb2f13ba9575240b5f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-conversation.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-conversation.jpg",
+      "bytes": 240252,
+      "sha256": "fd41b4a930ce298e012cdf0961a1c72df2d666d46073e1f56607e3ed9cab63ea",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-empty.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-empty.jpg",
+      "bytes": 289243,
+      "sha256": "ccf54821c2e93b207272dc67d617da146679ae511f3dd4fe271e376cf5406ce7",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-gunfire.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-gunfire.jpg",
+      "bytes": 249067,
+      "sha256": "e6cf30479900b6883394d6ef10da14629a9b2c1210721a619e3f58a5974af06a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-listener.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-listener.jpg",
+      "bytes": 249558,
+      "sha256": "feae05d14706fcadea4215ea707cffd7710b4c171ab8e8fd4158bb5233f40c94",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-memory.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-memory.jpg",
+      "bytes": 255801,
+      "sha256": "03984a7d4899502316ead5c405a16cd4a75e37ad3b72143e7a399658ce195e17",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-night.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-night.jpg",
+      "bytes": 254141,
+      "sha256": "b0bf387653109d50e38037f490a1f2f05c3c862db1326eb1ef6ba24a8f2ee07b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-oath.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-oath.jpg",
+      "bytes": 230970,
+      "sha256": "56fe7a43ad49a8fc694fb19a5cbdb3fda4e6261783337e540373f8277d267ebb",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-redoubt.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-redoubt.jpg",
+      "bytes": 227396,
+      "sha256": "993cf391c8d72778c216d4ab6a8798b8b9440ac053cb67ec76e5bcdc8de5e4f2",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-retreat.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-retreat.jpg",
+      "bytes": 257648,
+      "sha256": "32e4a5e892550f1d8071bd84d4ed7389fca271b5ecf8676f02fa1edc326cf4cb",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/borodino-v1-story.jpg",
+      "key": "illustrations/web-v1/trener/img/borodino-v1-story.jpg",
+      "bytes": 282010,
+      "sha256": "fc601ed57a7c48918f25dc2c662208e3a11c51040239fc41e044d73e96dfdb66",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-barn.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-barn.jpg",
+      "bytes": 209723,
+      "sha256": "f0e0f7ecb6bc57454ed840e14d9f5a66201ef15259c3f8c1e95c877e3ba45328",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-boots.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-boots.jpg",
+      "bytes": 247514,
+      "sha256": "8bc7c6d3aee375d04389512db3445246d52f0d29a0c9bf813f5f3a7711cbed24",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-dog.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-dog.jpg",
+      "bytes": 250947,
+      "sha256": "64718e9066ef409635ab0b3b3c113566c6b768e79c79d89cfcc2838d12fa040a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-harvest.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-harvest.jpg",
+      "bytes": 255911,
+      "sha256": "c09b4cb89348c49e7852d25c430d423a45d57fdc9f534894db120ad97916de15",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-storm.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-storm.jpg",
+      "bytes": 254039,
+      "sha256": "1aaa76b2a4e84c23c4b58b659a03862164193870be958bfef9ca928814d84364",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-talk.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-talk.jpg",
+      "bytes": 264539,
+      "sha256": "0a4daaace1445314151ae92aadde56fd2dbe6e65b7b53bf0d6509156f3a1eb97",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-traveller.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-traveller.jpg",
+      "bytes": 267863,
+      "sha256": "45b66f49626df7d3dc2a462aa919cb41b8de34129ed25bb4bb11bf34ad5501bb",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-vlas.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-vlas.jpg",
+      "bytes": 243072,
+      "sha256": "7ab225940f10e4d0a112c9418e9afcf12adc2c4214bb6aba654cf4c8b8f77d81",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-deti-woods.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-deti-woods.jpg",
+      "bytes": 309757,
+      "sha256": "2c7d1683741ba178c1f69154ff2f02eb56b69d8f27d690905d266186549b6f59",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-bread.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-bread.jpg",
+      "bytes": 272887,
+      "sha256": "a5620e09d31ee682b054fdfd28f8468a28b2b4cfc1c77b2c2f462a2556df1765",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-frost.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-frost.jpg",
+      "bytes": 229876,
+      "sha256": "f90e5269fdd6175161c62362eb72aa74169a7814c673fbfaf77a65bb21ed276c",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-grandmother.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-grandmother.jpg",
+      "bytes": 213788,
+      "sha256": "c307484ade322f0bd72518cf9d75a3d5a2d13ebd72f4c9771915b1619d8c84ef",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-hesitate.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-hesitate.jpg",
+      "bytes": 255841,
+      "sha256": "2d12e4838acc2ee81bb6cb8b4ddeef4a9865c52234118f06046a68f392f53d33",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-ice.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-ice.jpg",
+      "bytes": 320250,
+      "sha256": "28c1230183f9f361077d3c6080c3f2e3e424eb69d1559d6285bba12d75b64e17",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-magpie.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-magpie.jpg",
+      "bytes": 298323,
+      "sha256": "43194218bb7f5bb1e6216e478419511fd6e0ce189d01edb2575b7e0757da7e27",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-mill.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-mill.jpg",
+      "bytes": 336148,
+      "sha256": "dff945978011a4b4fe6ccb468dd72d05afb5b7783321351e9721110229c67a53",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-pankrat.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-pankrat.jpg",
+      "bytes": 226485,
+      "sha256": "1ab45da3a1b65ec6574893ebe2253882045ff7d013b83a42bced5dc1fdf68d16",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-hleb-refusal.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-hleb-refusal.jpg",
+      "bytes": 209121,
+      "sha256": "07dc3a4cb0d2515ea0146ae37f0d8da1fc38c983d31c412f6d3767062c26d73b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-distance.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-distance.jpg",
+      "bytes": 233565,
+      "sha256": "79655dfd070ca6e1d862f294705b164fc77f1316f740ae1cbf73d28aa12b4e5d",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-grove.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-grove.jpg",
+      "bytes": 353759,
+      "sha256": "8524c2cee0ed086838ee9c7fa8e8ab5e7993b46fbbccff3706057a9e2f481dad",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-listener.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-listener.jpg",
+      "bytes": 310021,
+      "sha256": "2223d2ff57e86e9128e8a8ed29ddc454673e7c9a4a68faf1acecaaa061dca3d5",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-meeting.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-meeting.jpg",
+      "bytes": 295818,
+      "sha256": "4c6baed1fa039813e5f1bcf205ccbabcaf711f2bcf9b7cde95a55c01dcc7b524",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-rest.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-rest.jpg",
+      "bytes": 328980,
+      "sha256": "91d9e2d8f2ff3ff02b643881c75d93114939a73afef1c8ae9b1a8e332a07e184",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-road.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-road.jpg",
+      "bytes": 298559,
+      "sha256": "5518d47fe16d3dece291d3621d8948428427b1cd7d9fd76befdbb8f5e26d0336",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-song.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-song.jpg",
+      "bytes": 325320,
+      "sha256": "dd286f53d72664e82158ea0197e925e3d152a64294e9cedcde36b1ccd88eac9b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kostsy-sunset.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kostsy-sunset.jpg",
+      "bytes": 297500,
+      "sha256": "e0fc6a96bc99adce0582eb9d569e7681dcfb9e45e1fee91be991e94fa0571e41",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-arrow.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-arrow.jpg",
+      "bytes": 258901,
+      "sha256": "88748a13d2fc66ce2af916d6a4192843db2049745ea0a3875bfc0cc7a108a30f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-camp.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-camp.jpg",
+      "bytes": 227599,
+      "sha256": "1fe3a7c8489f8544a4de0c92805871d0f64d7ddb2c5a99962acfc3345c200ee1",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-mare.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-mare.jpg",
+      "bytes": 215961,
+      "sha256": "ea5cb0b0e2c1088bffd39f5857861cdaa2dfa7dd0d38475d02424f65eadb7090",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-memory.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-memory.jpg",
+      "bytes": 223499,
+      "sha256": "a407b191c67abf813e5ee0baeb7af72c7e9e702285acea9677f20d7dd61a9446",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-mist.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-mist.jpg",
+      "bytes": 188307,
+      "sha256": "af14bb577b6b001993959d2a4f8dde181165d9c767a2cff802a908e681fe0195",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-path.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-path.jpg",
+      "bytes": 236671,
+      "sha256": "e894ba61d04ada8546e1eea933cdd8316330c6ba5cf0ec18813b64bc5a02f05f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-rider.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-rider.jpg",
+      "bytes": 209479,
+      "sha256": "038c23c2dfa065d3ba8b6fd2557d042c865e12781c73cf79cad6b8fd8cd832d5",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-river.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-river.jpg",
+      "bytes": 222878,
+      "sha256": "f33615cdc536016b8e03c01cbeb4e0868885d1f85734c6b76fa64997c25f1137",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-kulikovo-sunset.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-kulikovo-sunset.jpg",
+      "bytes": 223533,
+      "sha256": "c91919841b7b99d0d5a2acdea1ecdc3a5af75975e0738867145608f8c567c0de",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-dance.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-dance.jpg",
+      "bytes": 271825,
+      "sha256": "59410d20200c50cbc93df50fe9122888cdce49a4e4b1b97ff2c17f0884357742",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-dig.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-dig.jpg",
+      "bytes": 245298,
+      "sha256": "3e1e67688d87b262abb179476b0538f1a02f18626c225228867fb79730a1e505",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-familiar.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-familiar.jpg",
+      "bytes": 272531,
+      "sha256": "ef46401d556e4a14550d6602984a50f426b51a2398707347525df8633aa1e5bc",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-fear.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-fear.jpg",
+      "bytes": 249121,
+      "sha256": "680716e96e4c202a7d88e82cd912c8b24ec63bffbc6d1d96f62a0a4f093e0d4e",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-fence.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-fence.jpg",
+      "bytes": 274915,
+      "sha256": "d725756055fe42c0dbddaadbd5c711e55b1fe5751177c5ae8f2183578ad57096",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-laughing-v2.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-laughing-v2.jpg",
+      "bytes": 216448,
+      "sha256": "fed22cd3c5aee82b370e35ae7087107f8f211add7c9f22adebd7d61f37d55c9f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-light.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-light.jpg",
+      "bytes": 200996,
+      "sha256": "18ad34c0893efc4deae767d337a1d4133a8ff7d4303fa66a627622b89eec9f82",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-pot.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-pot.jpg",
+      "bytes": 284335,
+      "sha256": "b5c834fda066854cf63a4cebdd15d93dfb99423bc958868bb0c567ccda1a0c25",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-return.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-return.jpg",
+      "bytes": 246120,
+      "sha256": "1ac5ea29f95a787180851abeb6687421729274f92d0dbda774954890dcbc7fba",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-search.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-search.jpg",
+      "bytes": 294206,
+      "sha256": "a62a44a3840e5e9e631eaa1b16f1d27609cd2fad9fc7d669328ff6b51e1bc864",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-mesto-showoff.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-mesto-showoff.jpg",
+      "bytes": 293147,
+      "sha256": "017e8c510e6d54e81e6fcd74dff77aaffa4c4999c5674641ce58ba0d1d5e41fd",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-carrying.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-carrying.jpg",
+      "bytes": 255028,
+      "sha256": "a4e8b71e9cb151720d9645556c5c5bb192b9574cfc9c81610e0a5b3de4be09cc",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-flight.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-flight.jpg",
+      "bytes": 251632,
+      "sha256": "f1f82c3622f83d0286850c85728a2d4155c46993dec1c9e32f5b717570003706",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-gift.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-gift.jpg",
+      "bytes": 245328,
+      "sha256": "50e065bbccc20b892adfcc55ddb97178c7cae15644171445b59c961da40fccfb",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-mirror.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-mirror.jpg",
+      "bytes": 235995,
+      "sha256": "b49d15ca9fc0504f724d1b5539c66b2355f30e0e7fb481fa3f31b3e80f73a577",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-moon.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-moon.jpg",
+      "bytes": 249873,
+      "sha256": "eb24ebfe88628a44b445d608e05f2a3f64cde9afe01a3740b4847e9725ff5ade",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-palace.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-palace.jpg",
+      "bytes": 249499,
+      "sha256": "6f335740918644082c99fa8a60ecf23ceae44c26787844f4a580de456ed03038",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-sacks.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-sacks.jpg",
+      "bytes": 235172,
+      "sha256": "3de8eccde292129db9bcfffcc6fad1210b7e26dd582d85241e8eede30b7391d4",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-unsacked.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-unsacked.jpg",
+      "bytes": 243214,
+      "sha256": "40dd52e1693900a220447ad99b7bb002a00f08c781745a2db562dd60adc12c2a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-village.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-village.jpg",
+      "bytes": 270842,
+      "sha256": "7acd469d29862c88e9bd64352ff1d693da313f529cef5f43edf8d606b9651e03",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-nochka-waiting.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-nochka-waiting.jpg",
+      "bytes": 253848,
+      "sha256": "c0c05c109dec001d7811a15552afc418ca390484effe972cc1a6db64ea54bda9",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-alone.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-alone.jpg",
+      "bytes": 280153,
+      "sha256": "a4cbe1a8f507f630ce2fd6d6e3a0f6c787a04510aa5cbd39fa08bfbe8385561a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-caught.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-caught.jpg",
+      "bytes": 271210,
+      "sha256": "1c04f62e2d2c3590832d87cbc489e4e257bcc9135635313b889902aa8c0ba67f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-convoy.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-convoy.jpg",
+      "bytes": 294082,
+      "sha256": "1a4a1b95e5a8d240d0b0158cd35f5c97910a2ad80a644cb1b871563be68a1f7b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-doll.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-doll.jpg",
+      "bytes": 227817,
+      "sha256": "762e5410b64e95ca30312857760011260702fae0741a68c8550baed5449a0232",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-farewell.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-farewell.jpg",
+      "bytes": 253069,
+      "sha256": "a21f49c7c1d686b4df2a35ca2b10c73c2d3d4a77a2cb84d173639dd32c45656f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-flight.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-flight.jpg",
+      "bytes": 315948,
+      "sha256": "79afb9e31f78a815d0a00f84c3d235724572fa21619c9503686fe0c4a8f96ca0",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-freedom.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-freedom.jpg",
+      "bytes": 235994,
+      "sha256": "0b72b45867431610d26d9112f890efd0e90f00a58c980c76a0b502e0b9fb1642",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-friends.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-friends.jpg",
+      "bytes": 256001,
+      "sha256": "995b90774fb0f666d941c775ce5c36dfd4f4b3016ce452a31610ffe9e52eedd9",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-letter.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-letter.jpg",
+      "bytes": 220959,
+      "sha256": "8897a65df6821891c95718d00aac0e76ac0d5304d4e11789c605a3589365465b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-pit.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-pit.jpg",
+      "bytes": 204790,
+      "sha256": "18c5cc260f191fe3cd8145591a233725e96f14355ab9ec0acc096e33d876949d",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-plan.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-plan.jpg",
+      "bytes": 275288,
+      "sha256": "fa02389de743e4cf786b81bc410609590bef72bf2b31e1b37aadcebaeb72b1ed",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-ransom.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-ransom.jpg",
+      "bytes": 286891,
+      "sha256": "9cd853491799159480873a3b519d9329e8d4b6674f035b43a36b32a47fcbe0a2",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-plennik-work.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-plennik-work.jpg",
+      "bytes": 219782,
+      "sha256": "612871a2146fa45cfc25301bec1718d74ac394d037ae62300987639777bc2817",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-awakening.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-awakening.jpg",
+      "bytes": 250144,
+      "sha256": "33b68a2f411a91a6f1aa535799456c533994bf735a42840c2fbc11aa56ec173d",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-blessing.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-blessing.jpg",
+      "bytes": 225470,
+      "sha256": "bec54cc0af7c8a458f1dfd86fea23d0fe2c04ea14abd3e3769d747713efb388d",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-feast.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-feast.jpg",
+      "bytes": 222204,
+      "sha256": "aa8c4c4ff875c850e5213601b58a8fa11e5811ac875cd216287426253d183fcf",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-forest.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-forest.jpg",
+      "bytes": 288758,
+      "sha256": "1d2ba41fbf2676695458292a8fde35c30ec02e5f6a8048703db403ed8ccc293b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-palace.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-palace.jpg",
+      "bytes": 283162,
+      "sha256": "232927554b5757fe9c93364fda1eec176887aa4dbfd1022fd0d44e814b6b64e6",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-prince.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-prince.jpg",
+      "bytes": 290696,
+      "sha256": "9b7445e29019e25319e11cf1f004f62f3b51c7bf95abbd260e7f4ee6943e12f0",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-sleep.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-sleep.jpg",
+      "bytes": 231032,
+      "sha256": "d56a1c30dbb46cae86f493b699b1268833e087683ae6084a99af452ba8eec5f7",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-tsarevna-spindle.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-tsarevna-spindle.jpg",
+      "bytes": 216133,
+      "sha256": "80d1381f22bf1068a2bbbcbba6dc9767c5506e84b6354cc52283239e6f1dbb8e",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-bird.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-bird.jpg",
+      "bytes": 317082,
+      "sha256": "f51f66fca0aa17cc836aae931ec6b0c286fa56cf9f6bc632c0cb6f22d51bad1f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-fire.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-fire.jpg",
+      "bytes": 273487,
+      "sha256": "dd01dd699e43b6253590e5cdfa141ee878507991fda8231b840d5f248aee0ce1",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-forest.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-forest.jpg",
+      "bytes": 255381,
+      "sha256": "f715769ee116e861bd1127196d9f371050c0bcea1fee3e9fa650fc6492b8cc2a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-home.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-home.jpg",
+      "bytes": 242867,
+      "sha256": "173f24076e0e0a49ba8bd12f778df875c87830a41ddf27f97eef95aeb80126dd",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-lake.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-lake.jpg",
+      "bytes": 254023,
+      "sha256": "fa885e1dff52bfcafb30c581d6b5c7bbffdb0256714fef39cbaf95c721b1ad1f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-marks.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-marks.jpg",
+      "bytes": 291691,
+      "sha256": "20462ebdeefe708055078028a93e83e1893ba6aaa5f5b17a965b8ee798e73b1c",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-rain.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-rain.jpg",
+      "bytes": 281091,
+      "sha256": "f918f14469e844d180454c82a97f634fb93d167ed05270da99e1eb37d5484508",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-river.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-river.jpg",
+      "bytes": 288805,
+      "sha256": "47c49fd7af0c04e72ce1307fd287634929ee73fbc3751eba7fa6bc77a8ffe7cc",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-stream.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-stream.jpg",
+      "bytes": 321419,
+      "sha256": "5c0883317095efa6a0d021dc576cf5f95081aa8446fc9c7ca6638ac837b38a1f",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-vasyutka-supplies.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-vasyutka-supplies.jpg",
+      "bytes": 274334,
+      "sha256": "7e4aff06e19777dbe4e215c54b91621d474111b57eecc2cc21b963139ea8a438",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-decision.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-decision.jpg",
+      "bytes": 195045,
+      "sha256": "faa74e2afa6f410dfda05d679adf122d6e094a6362ad539fdcd7ff4073e3f457",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-expanse.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-expanse.jpg",
+      "bytes": 305022,
+      "sha256": "62b2b6772e5cc5023fe4f1fc33fdc51bfd7755cf6482ee16e763d32ebe66ea9a",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-farewell.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-farewell.jpg",
+      "bytes": 160281,
+      "sha256": "cf47c8bab03bcee14af34860d9d59fceb49ae97f3525a054d60649e4d2882450",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-governor.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-governor.jpg",
+      "bytes": 197271,
+      "sha256": "9690fbabcf603e7c926f2a6fd94d631c5ce5402c50170678be307478d7e28379",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-heroines.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-heroines.jpg",
+      "bytes": 210420,
+      "sha256": "ae606677312a72ff3ce421067d40e987109c706141ea3ddeb79cae5330ca9a42",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-journey.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-journey.jpg",
+      "bytes": 217941,
+      "sha256": "248dedc4aefd14a49a52928417b5270565c8b0b0dd453fd2ce032d7e8090adf0",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-paper.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-paper.jpg",
+      "bytes": 178570,
+      "sha256": "8a3152072c6716666b710db4dadbed012caefb9f0b09ea71492f626e879a0ed6",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-road.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-road.jpg",
+      "bytes": 208734,
+      "sha256": "2053779c006db82bf2e29c1f35b3b6df546edfcbd160e8a2f6e369e7ef102bdd",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-station.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-station.jpg",
+      "bytes": 200529,
+      "sha256": "a529b5c190793a418a9802cf82ef722be8d2c63567990d69ed53584d318d84f3",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/lit5-v1-zheny-window.jpg",
+      "key": "illustrations/web-v1/trener/img/lit5-v1-zheny-window.jpg",
+      "bytes": 188594,
+      "sha256": "345a97ee9db6826f47ff43824200c827f29f26e2298947de245912a5e49a6e4c",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-i3-v1-1.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-i3-v1-1.jpg",
+      "bytes": 226427,
+      "sha256": "c94b4b3faa6119d216b93e788290b3233b8758d439f20c6e44222ff80ed8533b",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-i3-v1-2.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-i3-v1-2.jpg",
+      "bytes": 226330,
+      "sha256": "2e56be5863f057c120858de6adc57cd9873df6563e1e70a725e7b3e09fe37b6d",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-i3-v1-3.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-i3-v1-3.jpg",
+      "bytes": 255994,
+      "sha256": "7750d43e357432d476e8d07b16a39eda9ae59850c9625e2783590cf8c9376483",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-couple.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-couple.jpg",
+      "bytes": 236082,
+      "sha256": "893b6d94838b8207b4c7e51accbe64b3407bf807c9f5b1b0630820e5108b1737",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-empty.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-empty.jpg",
+      "bytes": 232826,
+      "sha256": "1a9bfa46fa934b437cd2cfe24ae62fb60c95ceed3a68e3296a5654054edcc0aa",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-fear.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-fear.jpg",
+      "bytes": 213810,
+      "sha256": "33442ab71ccea9f3060a6dcab0765e59ca42d502332fe57e052545f3d05da880",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-field.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-field.jpg",
+      "bytes": 298556,
+      "sha256": "d5646356c07f0c8ab226db413509f77b3d8ec5d186f1561e154bcfa6e9165546",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-meal.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-meal.jpg",
+      "bytes": 213313,
+      "sha256": "9814c7973c8bac923770a40619df216309c6beeca61678537432edec6868c5fc",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-night.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-night.jpg",
+      "bytes": 210639,
+      "sha256": "032abe4252138e6f7d407f0221751da46bc7515b82c9a985c1bbda7cd9e9a8f4",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-order.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-order.jpg",
+      "bytes": 200435,
+      "sha256": "e28a6a8b3f898142bd3103150dc7fd5d6093e22671ad11f9e1e7d9a411bc34ab",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-promise.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-promise.jpg",
+      "bytes": 229939,
+      "sha256": "c1c2aafedf30bb691e14e0b1e66f7979f7ad4adb662b64af2632760c2d8b34dd",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-road.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-road.jpg",
+      "bytes": 264196,
+      "sha256": "3cf65a945fa7df54140d710dbd6f56c54a56bc0ecc428bff3140c083cd54c636",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-scarf.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-scarf.jpg",
+      "bytes": 226967,
+      "sha256": "37f60aad20b9ba1b31159ee07c8f0a9ed673f1b3e10cda33afb2da1d62789438",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-waiting.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-waiting.jpg",
+      "bytes": 241674,
+      "sha256": "b1100c6de8e1434a7aa57d90df4b3c102c6bb0077138e6e4bc5d5fb9289097d4",
+      "role": "site_asset",
+      "upload": true
+    },
+    {
+      "path": "trener/img/mumu-v2-work.jpg",
+      "key": "illustrations/web-v1/trener/img/mumu-v2-work.jpg",
+      "bytes": 256761,
+      "sha256": "851b26ad94171f752c67ef38857788c284ec169cc8be5ffca491dba273285596",
+      "role": "site_asset",
+      "upload": true
+    }
+  ]
+}
