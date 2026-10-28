@@ -1,0 +1,21 @@
+privacy.html
+  s_47e1862b0edacd::t_e8685557d2ce87 48
+trener/index.html
+  s_47e1862b0edacd::t_ebfbea8c1a3567 216,397,1873
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4a437d84b3d7cda17bbe2e59472296aa7c5dcbaa",
+  "prompts": {},
+  "sessions": {
+    "s_47e1862b0edacd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17c31-7c2d-7a21-a152-859d1b1ad453",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "alchuev <alchuev@gmail.com>"
+    }
+  }
+}
