@@ -1,0 +1,25 @@
+README.md
+  s_47e1862b0edacd::t_f79c97502148f2 45
+index.html
+  s_47e1862b0edacd::t_25d14615bd85ab 13
+privacy.html
+  s_47e1862b0edacd::t_1e628d67bdd917 45-46,48,51,55
+support.html
+  s_47e1862b0edacd::t_7ce7c16cb801d0 55,65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7a5d5dad0f261d58cd1af655df6e126cc340b71a",
+  "prompts": {},
+  "sessions": {
+    "s_47e1862b0edacd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17c31-7c2d-7a21-a152-859d1b1ad453",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "alchuev <alchuev@gmail.com>"
+    }
+  }
+}
