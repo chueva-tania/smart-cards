@@ -213,17 +213,7 @@ form.answer .wrong{border-color:var(--miss);background:var(--miss-soft);animatio
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 }
-.modal{
-  position:fixed;inset:0;background:rgba(15,14,30,.55);display:flex;align-items:center;
-  justify-content:center;padding:20px;z-index:10;animation:fadeIn .2s ease both;
-}
-.modal-box{
-  background:var(--card);border-radius:22px;padding:24px;max-width:420px;width:100%;
-  box-shadow:0 24px 60px rgba(0,0,0,.3);animation:fadeUp .25s ease both;
-}
-.modal-box h2{font-family:var(--font-read);margin-bottom:8px}
-.modal-box p{color:var(--muted);margin:0 0 18px}
-.btn.danger{background:var(--miss)}
+
 .hidden{display:none}
 .screen{animation:fadeUp .3s ease both}
 footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
@@ -344,7 +334,6 @@ form.answer:has(.cellbox:not(.hidden)){flex-direction:column;align-items:stretch
     </div>
 
     <div class="home-bottom">
-      <button class="btn ghost" id="resetStats">Сбросить прогресс</button>
       <footer>Результаты сохраняются на этом устройстве.</footer>
     </div>
   </section>
@@ -405,18 +394,7 @@ form.answer:has(.cellbox:not(.hidden)){flex-direction:column;align-items:stretch
     </div>
   </section>
 
-  <!-- подтверждение сброса -->
-  <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-box">
-      <h2 id="modalTitle">Сбросить прогресс?</h2>
-      <p>Отметки «выучено», попытки и подсказки обнулятся по всем темам.
-         Вернуть их будет нельзя.</p>
-      <div class="row">
-        <button class="btn danger" id="modalYes">Да, сбросить</button>
-        <button class="btn ghost" id="modalNo">Отмена</button>
-      </div>
-    </div>
-  </div>
+
 </div>
 
 <script src="../media.js?v=1"></script>
@@ -1811,7 +1789,6 @@ function show(name) {
   ['home', 'play', 'done'].forEach(s => $(s).classList.toggle('hidden', s !== name));
   window.scrollTo(0, 0);
 }
-const closeModal = () => $('modal').classList.add('hidden');
 
 /* ---------- события ---------- */
 $('scroller').addEventListener('scroll', updateScrollHint, { passive: true });
@@ -1891,19 +1868,9 @@ $('againHard').addEventListener('click', () => {
 $('shareFriend').addEventListener('click', () => shareTopic('friend'));
 $('shareChat').addEventListener('click', () => shareTopic('chat'));
 
-$('resetStats').addEventListener('click', () => $('modal').classList.remove('hidden'));
-$('modalNo').addEventListener('click', closeModal);
-$('modal').addEventListener('click', e => { if (e.target === $('modal')) closeModal(); });
-$('modalYes').addEventListener('click', () => {
-  stats = {}; saveStats();
-  rankSaved = {}; saveRank();
-  streak = { last: '', count: 0, best: 0, run: 0, disciplined: false, discStart: '' }; saveStreakState();
-  closeModal(); renderHome();
-});
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  if (!$('modal').classList.contains('hidden')) closeModal();
-  else if (!$('play').classList.contains('hidden')) renderHome();
+  if (!$('play').classList.contains('hidden')) renderHome();
 });
 
 { const sub = SUBJECTS.find(s => s.works.some(w => w.id === LINKED));
