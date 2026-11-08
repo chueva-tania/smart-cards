@@ -561,7 +561,7 @@ const openCards = () => worksOf().filter(isOpen).flatMap(w => w.cards);
     if (targets.includes(v)) return 'exact';
     if (card.strict || hasDigit(v) || targets.some(hasDigit)) return false;
     if (targets.some(t => isInside(v, t))) return 'inside';
-    if (targets.some(t => t.length >= 6 && lev([...v], [...t]) <= 1)) return 'almost';
+    // Описки в одну букву больше не засчитываются (как на сервере с 08.11.2026).
     return false;
   }
 
@@ -1635,6 +1635,8 @@ function pickLetter(ch) {
 
 function togglePicking() {
   state.picking = !state.picking;
+  // Набранное стирается: в клетках остаются только открытые верные буквы (как в приложении 1.60).
+  $('answerInput').value = '';
   $('answerInput').readOnly = state.picking;
   $('submitBtn').classList.toggle('hidden', state.picking);
   renderWord();
@@ -1670,6 +1672,7 @@ function answer() {
 
   if (c.type === 'word') {
     $('feedback').textContent = 'Неверно. Попробуй ещё раз или открой подсказку.';
+    el.value = ''; renderCells(false);   // неверное слово не остаётся в клетках
     $('cells').classList.remove('shake'); void $('cells').offsetWidth; $('cells').classList.add('shake');
   } else {
     // Не узнали мысль — это уточнение, а не ошибка: открыта следующая подсказка, ответ про мысль, а не про слова
