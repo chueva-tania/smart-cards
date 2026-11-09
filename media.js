@@ -18,8 +18,6 @@
     let value = source.trim();
     if (value.startsWith('assets/')) return '/api/v1/files/illustrations/web-v1/' + value;
     if (value.startsWith('/assets/')) return '/api/v1/files/illustrations/web-v1' + value;
-    if (value.startsWith('trener/img/')) return '/api/v1/files/illustrations/web-v1/' + value;
-    if (value.startsWith('img/')) return '/api/v1/files/illustrations/web-v1/trener/' + value;
     if (value.startsWith('/illustrations/')) return '/api/v1/files' + value;
     if (value.startsWith('illustrations/') || value.startsWith('generated/')) return '/api/v1/files/' + value;
     return value;
