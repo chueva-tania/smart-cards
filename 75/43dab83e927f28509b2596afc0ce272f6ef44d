@@ -1,0 +1,19 @@
+README.md
+  s_47e1862b0edacd::t_e28f2c0df8bb63 3-4,78-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7543dab83e927f28509b2596afc0ce272f6ef44d",
+  "prompts": {},
+  "sessions": {
+    "s_47e1862b0edacd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17c31-7c2d-7a21-a152-859d1b1ad453",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "alchuev <alchuev@gmail.com>"
+    }
+  }
+}
