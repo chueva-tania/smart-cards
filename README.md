@@ -1,8 +1,7 @@
 # Вспоминалка — публичный сайт
 
-[https://vspominalka.ru](https://vspominalka.ru) — описание iOS-приложения, интерактивный
-пример на трёх карточках. Статические HTML/CSS/JavaScript размещаются в GitHub Pages
-из корня ветки `main`. Домен задан файлом `CNAME`.
+[https://vspominalka.ru](https://vspominalka.ru) — описание iOS-приложения и интерактивный
+пример на трёх карточках. Статические файлы обслуживает Caddy на IMS-4.
 
 ## Содержимое
 
@@ -76,13 +75,10 @@ node ../smartcards-ios/tools/tests/js/demo.js .
 
 ## Публикация
 
-```bash
-git push origin main
-```
-
-GitHub Pages публикует корень `main`; `CNAME` сохраняется в коммите. Завершение push
-подтверждает отправку исходников, а готовность сайта проверяется отдельно по результату
-Pages и содержимому [vspominalka.ru](https://vspominalka.ru).
+На IMS-4 корень сайта находится в `D:\Services\SmartCards\site`. В него выкладываются
+`index.html`, `support.html`, `privacy.html`, `landing.css`, `media.js`, `demo.js`,
+`demo-engine.js` и каталог `assets`. HTTPS для `vspominalka.ru` обслуживает Caddy.
+После замены файлов проверьте главную с примером, страницы поддержки и конфиденциальности.
 
 Публичная ссылка установки iOS на сайте не размещена. Сборки TestFlight выпускаются из
 [smartcards-ios](https://github.com/chueva-tania/smartcards-ios); API, админка и Storage
