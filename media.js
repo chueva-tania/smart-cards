@@ -5,7 +5,7 @@
   root.SmartCardsMedia = media;
 })(typeof globalThis === 'object' ? globalThis : this, function (root) {
   'use strict';
-  const DEFAULT_API_ORIGIN = 'https://cards.artial.dev';
+  const DEFAULT_API_ORIGIN = 'https://api.vspominalka.ru';
 
   function origin() {
     const url = new URL(root.SMARTCARDS_API_ORIGIN || DEFAULT_API_ORIGIN);

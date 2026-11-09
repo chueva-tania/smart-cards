@@ -25,7 +25,7 @@
 Растровые иллюстрации находятся в File Storage на IMS-4 (SeaweedFS/S3, бакет `smartcards`).
 Иллюстрации сайта используют префикс `illustrations/web-v1/`; соответствие исходным
 путям и проверенные хеши записаны в `docs/image-storage-manifest.json`.
-Сайт загружает картинки через API `/api/v1/files/{ключ}`. В базе сервера находятся только
+Сайт загружает картинки через `https://api.vspominalka.ru/api/v1/files/{ключ}`. В базе находятся только
 относительные ключи объектов, без домена и бакета; реквизиты S3 браузеру не передаются.
 Перенесённые растровые файлы не хранятся в репозитории сайта. Архивные источники
 основного банка карточек сохраняются в закрытом префиксе `sources/` Storage.
@@ -79,6 +79,7 @@ node ../smartcards-ios/tools/tests/js/demo.js .
 `index.html`, `support.html`, `privacy.html`, `landing.css`, `media.js`, `demo.js`,
 `demo-engine.js` и каталог `assets`. HTTPS для `vspominalka.ru` обслуживает Caddy.
 После замены файлов проверьте главную с примером, страницы поддержки и конфиденциальности.
+Админка открывается в домашней сети по адресу `https://admin.vspominalka.ru/`.
 
 Публичная ссылка установки iOS на сайте не размещена. Сборки TestFlight выпускаются из
 [smartcards-ios](https://github.com/chueva-tania/smartcards-ios); API, админка и Storage
